@@ -9,7 +9,8 @@ Class Login_model extends CI_Model
    $this -> db -> where('username', $username);
    $this -> db -> where('password', $password);
    $this -> db -> limit(1);
-
+   
+   // query
    $query = $this -> db -> get();
 
    if($query -> num_rows() == 1)
